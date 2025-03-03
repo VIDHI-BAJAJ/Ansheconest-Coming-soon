@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #06351fda;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding-top: 20px;
+}
+
+header h1 {
+    font-family: "Tangerine", cursive;
+    font-size: 70px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 15px;
+    color: #fff;
+}
+
+/* Main Content */
+
+.main-content h2 {
+    font-family: "Tangerine", cursive;
+    font-size: 150px;
+    margin-top: 43px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.main-content h2 span {
+    font-style: italic;
+}
+
+/* Image Grid */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-item {
+    width: 300px; /* Adjust as needed */
+    margin: 10px;
+    overflow: hidden; /* Prevents images from overflowing the container */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the image */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Zoom on hover */
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Important for consistent width */
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #777;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content h2 {
+        font-size: 2.5em;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-item {
+        width: 80%;
+        max-width: 400px;
+    }
+    .contact-section {
+      flex-direction: column;
+      align-items: stretch; /* Make form-container take full width */
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .main-content h2 {
+        font-size: 2em;
+    }
+
+    .image-item {
+        width: 90%;
+    }
+}
+
+.image-scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 10px;
+}
+
+.image-scroll {
+    display: flex;
+    gap: 20px;
+    animation: scrollAnimation 20s linear infinite;
+    width: max-content; /* Ensures all images are in a single line */
+}
+
+.image-scroll img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Keyframes for seamless infinite scrolling */
+@keyframes scrollAnimation {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Moves only half, as we duplicated images */
+}
+
+
+/* Keyframes for seamless infinite scrolling */
+@keyframes scrollAnimation {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Move only half, as we duplicated images */
+}
+
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .image-scroll img { max-width: 180px; }
+}
+
+@media (max-width: 768px) {
+    .image-scroll img { max-width: 150px; }
+}
+
+@media (max-width: 480px) {
+    .image-scroll img { max-width: 120px; }
+}

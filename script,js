@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollContainer = document.querySelector(".image-scroll");
+
+    // Duplicate images for seamless scrolling
+    scrollContainer.innerHTML += scrollContainer.innerHTML;
+});

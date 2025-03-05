@@ -179,36 +179,12 @@ footer {
         width: 80%;
         max-width: 400px;
     }
-    .contact-section {
-      flex-direction: column;
-      align-items: stretch; /* Make form-container take full width */
-    }
 }
 
-@media screen and  (max-width: 768px){
-    .form-group {
-        margin-left: 74px;
-    }
-    .contact-info {
-        margin-right: 150px;
-    }
-}
-@media screen and  (max-width: 680px){
-   
-    .contact-info {
-        margin-right: 140px;
-    }
-}
-@media screen and  (max-width: 570px){
-   
-    .contact-info {
-        margin-right: 88px;
-    }
-}
 /* Small screens */
 @media screen and  (max-width: 480px) {
     .main-content h2 {
-        font-size: 90px;
+        font-size: 76px;
     }
     .form-container h2 {
         margin-left: 10px;
@@ -218,6 +194,21 @@ footer {
     }
     .form-group {
             margin-left: 26px;
+    }
+}
+
+@media screen and  (max-width: 400px) {
+    .main-content h2 {
+        font-size: 76px;
+    }
+    .form-container h2 {
+        margin-left: 10px;
+    }
+    .image-item {
+        width: 90%;
+    }
+    .form-group {
+        margin-left: 50px;
     }
 }
 

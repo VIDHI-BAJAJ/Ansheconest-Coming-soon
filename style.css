@@ -192,9 +192,6 @@ footer {
     .image-item {
         width: 90%;
     }
-    .form-group {
-            margin-left: 26px;
-    }
 }
 
 @media screen and  (max-width: 400px) {
@@ -206,9 +203,6 @@ footer {
     }
     .image-item {
         width: 90%;
-    }
-    .form-group {
-        margin-left: 50px;
     }
 }
 
